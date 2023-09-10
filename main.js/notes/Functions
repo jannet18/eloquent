@@ -1,0 +1,60 @@
+FUNCTIONS
+Blocks of reusable code that can be called to perform different functions.
+DEFINING FUNCTIONS
+1. Function declaration
+named function declaration  you declare a function with 'function' keyword and provide a name anda specify parameters within paranthesis
+function greet(name){
+    console.log(`Hello, ${name}`);
+}
+
+3.Arrow function expression 
+Provide more concise syntax for function expressions, esp with single expressions in the function body. They cap `this` value from the sorrounding context.
+const greet = (name) => {
+    console.log(``Hello, ${name}`);
+}
+4. Method within an Object Literal
+Functions defined as properties of objects are often referred to as methods.They can access objects properties and are often used in object-oriented programming
+const person = {
+    name: = "Alice";
+    greet: function() {
+        console.log(`Hello, ${this.name}!`);
+    }
+}
+5. Method using ES6 shorthand
+const person = {
+    name: 'Alice',
+    greet() {
+        console.log(`Hello, ${this.name}`);
+    }
+}
+
+***  ANONYMOUS FUNCTIONS ***
+functions that do not have a name.
+defined inline within the context where its needed.
+often used as arguements to other functions
+6. Immediately Invoked Function Expression(IIFE)
+(function(){
+   // code here
+})();
+
+** Common uses **
+. Function expression
+involve assigning an anonymous function to a variable. they are not hoisted , so you must declare them before using them.
+function greet(name){
+    console.log(`Hello, ${name}`);
+}
+
+const add = function(x, y){
+    return x + y;
+}
+console.log(add(5, 6));
+
+b. Callback functions
+when passing a function as an arguement to another function such as array.map(), array.forEach();
+const numbers = [1, 2, 3, 4];
+
+numbers.forEach(function(number){
+    console.log(number);
+})
+
+
