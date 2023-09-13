@@ -1,0 +1,17 @@
+ENVIRONMENT/SCOPES
+Refers to context in which a piece of code id exeuted including variables,functions and other resources in that context.
+Global SCOPE
+
+
+RECURSION
+Technique where a function calls itself to solve a problem.
+It is powerful and eleganat way to solve  problems that can be broken down in to smaller ,similar subproblems.
+Key points in RECURSION
+1. Define a base case 
+every recursive function should have a base case that defines when recursion should stop.
+2. Make progress towards the base case.
+each recursive call should move closer towards the base case.
+3. Ensure termination
+ensure the recursive function eventually reaches the base case.
+4. Stack limitations
+deep recursion can lead to "Maximum call stack size exceeded"
