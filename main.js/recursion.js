@@ -12,7 +12,7 @@
 
 // SOLN
 function isEven(num){
-    // if num === 0 return 0
+    // if num === 0 return 0 /true
     if (num === 0){
         return true;
     }
