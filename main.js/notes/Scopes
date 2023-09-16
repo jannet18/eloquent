@@ -15,3 +15,63 @@ each recursive call should move closer towards the base case.
 ensure the recursive function eventually reaches the base case.
 4. Stack limitations
 deep recursion can lead to "Maximum call stack size exceeded"
+
+THREAD EXECUTION 
+Js is a single-threaded language.
+Single sequential flow of control.
+Js is a synchronous language(code is executed in a block manner, when synchronous operation is initiated the program will wait for the operation to complete before moving on to the next.)
+Js has asynchronous capabilities(where tasks can be initiated and continue executing other code while waiting for the task to complete. This is achieved using callbacks, promises, and async/await syntax.)
+A thread has a call stack and memory.
+
+CALL STACK
+In JavaScript call stack is a data structure that helps manage the excution of functions. Keeps tracks of the order in which functions are called and ensures that execution of functions follows last in, first out(LIFO) principle.
+HOW YOUR CODE WORKS
+whenever you invoke a function, details of invocation are saved to the top of the stack(pushed to the top)
+whenever a function returns, the information about the invocation is taken off the top of the stack(popped of the top)
+
+EXECUTION CONTEXT 
+Whenever you run any JS code a special envrionment is created to handle the transformation and execution of code. 
+An abstract concept that describes the environment in which JS code is executed. It includes information about variables, functions and other data that a piece of code has access to at a particular moment during its execution.
+(contains currently running code and everything that aids it)
+
+THREE MAIN TYPES
+Global Execution Context
+outermost and default execution context.
+represents environment where code outside of any function is executed, code in global scope.
+browser = window, Node.js = global
+
+Function Execution Context
+A new function is created each time a function is called(invoked)
+Includes info' about the functions arguements, local variables and a reference to its outer environment.
+Each function creates a new execution context, these contexts are stacked in call stack.
+
+Execution Context 
+Includes;
+Memory - this is the variable environment that stores all of your variables and functions as key value pairs in memory.
+Execution(code) - this is the thread of execution. each line of code is executed line by line.
+
+Execution Context Phases
+Memory creation Phase
+- create the global object(browser = window. Node.js = global)
+- create the 'this' object and binds it to the global object
+- setup memory heap for storing variables and function references
+- store functions and variables in global execution context and set to 'undefined'
+
+Execution Phase
+- execute code line by line.
+-create a new execution context for each function call
+
+HOISTING
+- default behaviour of moving all the declarations at the top of the scope before code execution.
+Common cases where hoisting occurs
+Variable hoisting
+- when you declare a variable using var keyword, the declaration is hoisted at the top of the function or global scopr in which the function is defined.
+- however,initialization remains in place.
+- means that you can access the variable before its declared in your code, but i will be undefined until its initialized
+
+Function hoisting
+- function declarations are also hoisted to the top of the containing scope meaning you can call a function before its declared in your code.
+
+NB: let and const have block-level scope, recommended for variable declarations.
+
+
