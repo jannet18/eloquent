@@ -1,0 +1,24 @@
+ASYNCHRONOUS, TASK QUEUE AND EVENT LOOP
+An asynchronous model allows multiple things to happen at the same time.
+when you start an action your program continues to run. When the action is complete the program is informed and gets access to the result.
+
+Blocking vs Non-Blocking
+Blocking - operations that block further execution until the operation completes
+Non-blocking - code that does not block execution
+
+ORDER
+Event loop
+- contiounous process that runs in the background of a js runtime, such as web browser or Node.js
+- constantly checks call stack for functions that need to be executed.
+
+Call stack
+- data structure that keeps tracks of function call in the order which they are invoked.
+- when a function is called it is pushed n to the call stack and when it returns/completes it is popped off from the stack.
+
+Task queue
+- holds the tasks or callbacks that are ready to be executed.
+- processed by the event loop when the call stackk is empty.
+Execution order.
+
+- correllation - is the measure of dependence between statistical values
+
