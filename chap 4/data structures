@@ -1,0 +1,72 @@
+PROPERTIES
+* Math properties - a collection of mathematics based-related constants and functions.
+- All values in JS have properties except 
+null and Undefined - (non-values)
+- null - special value that represents the intentional absence of any object.
+- undefined - default value assigned to a variable that has been declared bt not initialized.
+
+* MAIN WAYS TO ACCESS PROPERTIES
+- Dot notation - value.x -- the word after the dot is the literal name of the property.
+- Square brackets - value.[x] -- value between brackets is evaluated to get property name.
+
+* METHODS
+- Both string and array values contain number of properties that hold function values.
+- push method - adds value to the end of an array.
+- pop method - removes the last value in the array and returning it.
+
+* OBJECTS
+- Difference in setting a property to undefined and actually deleting it is in the first case the objects still has property(it just doesn't have a very interesting value), whereas in the second case the property is no longer present and it returns false.
+- Object.keys function - used to find out what properties an object has. It returns an array of strings(objects property names).
+- Object.assign function and spread operator - copies all properties from one object to another.
+
+* MUTABILITY AND IMMUTABILITY
+- Mutability - refers to data types that can be accessed and changed after they have been created and stored in memory.
+
+- immutablity - data types that can't change after creating them but you can still access them in memory.
+
+* DATA TYPES
+- Stack - a data structures that obeys Last In First Out (LIFO) - the last item to enter goes out first.
+- Heap - reference data are stored inside the heap. When reference data is created the variable of the data is place on the stack but the actual value is placed in the heap.
+
+* * Categorized in to Primitive and Reference.
+* Primitive data types - immutable and are not objects because they lack properties and methods
+string, boolean, bigint, null, undefined, symbol, number
+
+- Reference - these data types are mutable. Constist of functions, arrays and objects.
+- these data types place variable on the stack.
+- The variable serves as a pointer that points to the object located on the heap.
+- mutability allows you to modify existing values without creating new ones.
+- for every object , a pointer is added to the stack and this pointer points to the object on the heap.
+
+HOW TO PREVENT OBJECT MUTABILITY
+* TO ADD TO AN EXISTING OBJECT
+const studentNames = {
+    student1: 'Sakina',
+    student2: 'Brooks',
+}
+
+Object.defineProperty(studentNames, 'student3', {
+    value: 'Glory',
+})
+modify existing property using defineProperty
+- Object.defineProperty(obj, prop, descriptor)
+Object.defineProperty(studentNames, 'student2', {value: 'Jason'})
+
+* DELETE A PROPERTY
+delete object.propertyname
+
+* TO PREVENT MUTABILITY
+- utilize Object.preventExtenstions(), Object.seal() and Object.freeze()
+
+* Object.preventExtensions()
+- stops new properties from entering the object. it does not increase in size and maintains its properties.
+- By default all objects in js are extensible.
+- An extensible object is one to which new properties and methods can be added, and existing properties and methods can be modified or deleted.
+* Object.seal()
+- method seals an object preventing addition or deletion of properties and making existing properties non-configurable.
+- However, the values of the existing properties can still modified.
+- isSealed() - used to check if a object is sealed.
+
+* Object.freeze()
+- method freezes an object.
+- isFrozen() - checks if an object is frozen
