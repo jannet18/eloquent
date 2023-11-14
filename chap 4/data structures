@@ -70,3 +70,11 @@ delete object.propertyname
 * Object.freeze()
 - method freezes an object.
 - isFrozen() - checks if an object is frozen
+
+** CORRELATION
+- Measure of dependence between statistical variables. 
+- the phi coefficient - (measure of strength and direction of linear rltionship btwn two variables)
+- ranges from -1 to 1
+1 - indicates perfect positive linear rlationship
+0 - indicates no linear rlationship
+-1 - indicates perfect negative rltionship(opposite)

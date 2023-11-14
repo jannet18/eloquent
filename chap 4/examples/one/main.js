@@ -27,15 +27,15 @@
 
 // const countriesVisited = [ 'Nigeria', 'Japan', 'Austalia'];
 // console.log(countriesVisited);
-const studentNames = {
-    student1: 'Sakina',
-    student2: 'Brooks',
-}
-Object.defineProperty(studentNames, 'student3', {
-    value: 'Glory',
-})
+// const studentNames = {
+//     student1: 'Sakina',
+//     student2: 'Brooks',
+// }
+// Object.defineProperty(studentNames, 'student3', {
+//     value: 'Glory',
+// })
 
-Object.defineProperty(studentNames, 'student2', {value: 'Jason'},)
+// Object.defineProperty(studentNames, 'student2', {value: 'Jason'},)
 
-delete studentNames(student2)
-console.log(studentNames);
+// delete studentNames(student2)
+// console.log(studentNames);
